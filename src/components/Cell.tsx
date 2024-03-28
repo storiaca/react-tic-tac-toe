@@ -3,10 +3,8 @@ type CellProps = {
   cell: string;
   cells: string[];
   setCells: (cell: string[]) => void;
-  player: string;
   firstGo: string;
   setFirstGo: (player: string) => void;
-  setPlayer: () => void;
   winner: string;
 };
 export default function Cell({

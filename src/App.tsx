@@ -38,7 +38,7 @@ function App() {
     if (winner || checkArray) {
       let emptyArray = new Array(9).fill("");
       setCells(emptyArray);
-      setWinner(null);
+      setWinner("");
     }
   }
 
@@ -61,9 +61,11 @@ function App() {
             />
           );
         })}
-        <button onClick={handleResetGame}>Reset Game</button>
+        <button onClick={handleResetGame} disabled={winner ? false : true}>
+          Reset Game
+        </button>
 
-        {winner && <h2>{winner}</h2>}
+        {winner && <h2 className="winner-title">{winner}</h2>}
       </div>
     </div>
   );

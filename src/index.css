@@ -100,18 +100,24 @@ button {
   background-color: #f99417;
   border: none;
   border-radius: 10px;
-  margin-top: 15px;
+  margin: 20px auto;
+  display: block;
   color: white;
   cursor: pointer;
   font-size: 18px;
+  transition: all 0.45s ease-in;
 }
 
-h2 {
-  background-color: #363062;
+button:disabled {
+  background-color: #df1c41;
+  cursor: not-allowed;
+}
+
+.winner-title {
+  background-color: #fe5829;
   padding: 20px;
-  margin-top: 20px;
+  margin: 20px auto 0;
   border-radius: 15px;
   color: #f5f5f5;
-
   text-align: center;
 }
