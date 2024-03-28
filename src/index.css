@@ -34,13 +34,15 @@ body {
   margin: 10px 0;
   border-radius: 15px;
 }
-.squareContainer {
+
+.square-container {
   width: 320px;
   height: 320px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .square {
   width: 100px;
   height: 100px;
@@ -95,7 +97,7 @@ body {
   width: 100%;
 }
 
-button {
+.button-reset {
   padding: 16px 24px;
   background-color: #f99417;
   border: none;
@@ -108,7 +110,7 @@ button {
   transition: all 0.45s ease-in;
 }
 
-button:disabled {
+.button-reset:disabled {
   background-color: #df1c41;
   cursor: not-allowed;
 }

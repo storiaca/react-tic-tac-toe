@@ -46,7 +46,7 @@ function App() {
     <div className="app">
       <h1 className="title">X/O Game</h1>
 
-      <div className="squareContainer">
+      <div className="square-container">
         {cells.map((cell, index) => {
           return (
             <Cell
@@ -61,7 +61,11 @@ function App() {
             />
           );
         })}
-        <button onClick={handleResetGame} disabled={winner ? false : true}>
+        <button
+          className="button-reset"
+          onClick={handleResetGame}
+          disabled={winner ? false : true}
+        >
           Reset Game
         </button>
 
