@@ -18,19 +18,26 @@ export default function Cell({
 }: CellProps) {
   function handleGame(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     let target = event.target as HTMLDivElement;
-    let taken =
-      target.firstChild?.classList.contains("circle") ||
-      target.firstChild?.classList.contains("cross");
+    let firstChild = target.firstChild;
+    if (firstChild) {
+      let taken =
+        // @ts-ignore
+        firstChild!.classList.contains("circle") ||
+        // @ts-ignore
+        firstChild!.classList.contains("cross");
 
-    if (!taken) {
-      if (firstGo === "circle") {
-        target.firstChild?.classList.add("circle");
-        setFirstGo("cross");
-        handleCellChange("circle");
-      } else if (firstGo === "cross") {
-        target.firstChild?.classList.add("cross");
-        setFirstGo("circle");
-        handleCellChange("cross");
+      if (!taken) {
+        if (firstGo === "circle") {
+          // @ts-ignore
+          firstChild!.classList.add("circle");
+          setFirstGo("cross");
+          handleCellChange("circle");
+        } else if (firstGo === "cross") {
+          // @ts-ignore
+          firstChild!.classList.add("cross");
+          setFirstGo("circle");
+          handleCellChange("cross");
+        }
       }
     }
   }
