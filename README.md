@@ -1,5 +1,9 @@
 # X/O Game
 
+## Live link
+
+https://react-tic-tac-toe-n7nn.vercel.app/
+
 ## Install packages:
 
 ```bash
