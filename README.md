@@ -1,5 +1,7 @@
 # X/O Game
 
+Simple XO game, project built with React, TypeScritp, and TailwindCSS
+
 ## Live link
 
 https://react-tic-tac-toe-n7nn.vercel.app/
